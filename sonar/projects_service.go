@@ -159,7 +159,7 @@ func (s *ProjectsService) Search(opt *ProjectsSearchOption) (v *ProjectSearchObj
 	v = new(ProjectSearchObject)
 	resp, err = s.client.Do(req, v)
 	if err != nil {
-		return nil, resp, err
+		return v, resp, err
 	}
 	return
 }
